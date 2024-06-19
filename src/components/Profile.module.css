@@ -1,0 +1,11 @@
+.name {
+  font-weight: 700;
+  color: orangered;
+}
+.name span {
+  font-style: italic;
+}
+.email {
+  font-size: 2rem;
+  text-decoration: underline;
+}
