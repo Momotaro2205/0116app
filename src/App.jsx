@@ -33,10 +33,13 @@ function App(props) {
             />
             <Route
               path="/profile"
-              element={<Profile function={props.function} />}
+              element={<Profile function={props.users.key_getUser} />}
             />
             <Route path="/messages" element={<Messages />} />
-            <Route path="/friends" element={<Friends />} />
+            <Route
+              path="/friends"
+              element={<Friends function={props.users.key_getUsers} />}
+            />
             <Route path="/settings" element={<Settings />} />
           </Routes>
         </div>
