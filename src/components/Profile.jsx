@@ -5,8 +5,9 @@ export const Profile = (props) => {
     color: "green",
     fontSize: "2rem",
   };
-  let user = props.function();
-  console.log(user);
+  let userId = window.location.pathname.split("/")[2];
+  let user = props.function(userId);
+  //console.log(user);
   return (
     <div className="row">
       <div className="col-md-4">
@@ -26,7 +27,9 @@ export const Profile = (props) => {
         <p style={idStyle}>
           Id: <span>{user.id}</span>
         </p>
-        <p style={{ fontSize: 24, color: "red" }}>История о себе:</p>
+        <p style={{ fontSize: 24, color: "red" }}>
+          История о себе: {user.about}
+        </p>
       </div>
     </div>
   );
