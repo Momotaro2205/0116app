@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 /*
   This example requires some changes to your config:
   
@@ -96,6 +98,8 @@ const products = [
 ];
 
 export default function Settings() {
+  const [count, setCount] = useState(0);
+
   return (
     <div className="bg-green-300">
       <div className="max-w-2xl px-4 py-16 mx-auto sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
@@ -119,6 +123,21 @@ export default function Settings() {
               </p>
             </a>
           ))}
+        </div>
+        <div className="grid grid-cols-2 gap-6 mt-16 border-2 p-10">
+          <div className="w-full">
+            <button
+              className="bg-indigo-500 rounded-md px-3 text-xl py-3 text-white"
+              onClick={() => {
+                setCount(count + 1);
+              }}
+            >
+              Нажми на меня
+            </button>
+          </div>
+          <div className="w-full text-lg text-orange-400">
+            Количество кликов: {count}
+          </div>
         </div>
       </div>
     </div>

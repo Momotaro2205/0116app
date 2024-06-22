@@ -48,10 +48,10 @@ const user = {
 // };
 let users = [];
 
-export function getUser() {
-  // for (let i = 0; i < Object.keys(users).length; i++) {
-  //   if (users[i].id == usersId) return users[i];
-  // }
+export function getUser(usersId) {
+  for (let i = 0; i < users.length; i++) {
+    if (users[i].id == usersId) return users[i];
+  }
   return user;
 }
 
